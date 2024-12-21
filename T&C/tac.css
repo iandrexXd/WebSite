@@ -1,0 +1,109 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Container for the terms */
+#terms-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: #2a2a40;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Header styling */
+.terms-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.terms-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffcc00;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.terms-header p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+/* Content styling */
+.terms-content {
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling for going back */
+#back-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #ffcc00, #ffa31a);
+    color: #1e1e2f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#back-btn:hover {
+    background: linear-gradient(135deg, #ffd633, #ffb84d);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+#back-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

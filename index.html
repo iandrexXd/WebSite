@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madanu - Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div id="background-animation">
+        <div class="circle"></div>
+        <div class="square"></div>
+        <div class="triangle"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Madanu - Services and Shop</h1>
+        <p>Creare servere Discord, design grafic și mai mult. Calitate garantată!</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">Despre Mine</a></li>
+            <li><a href="#pricing">Prețuri</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Despre Mine</h2>
+        <p>Sunt un developer de servere Discord și designer grafic.</p>
+        <div class="card-container">
+            <div class="card">
+                <h3>Developer Servere Discord</h3>
+                <p>Creare și configurare servere Discord optimizate și securizate.</p>
+            </div>
+            <div class="card">
+                <h3>Design Grafic</h3>
+                <p>Postere, profile pictures și thumbnails de înaltă calitate.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2>Prețuri</h2>
+        <div class="pricing-card">
+            <h3>Servere Discord</h3>
+            <p>De la <strong>5€</strong> la <strong>125€</strong>, în funcție de complexitate.</p>
+        </div>
+        <div class="pricing-card">
+            <h3>Graphic Design</h3>
+            <p>De la <strong>2.5€</strong> la <strong>5€</strong>, în funcție de detalii.</p>
+        </div>
+    </section>
+
+    <!-- Modalul pentru metodele de plată -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-payment-modal" class="close">&times;</span>
+            <h2>Metode de Plată</h2>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="assets/selfpay.png" alt="SelfPay" class="payment-icon">
+                    <span>SelfPay</span>
+                </div>
+                <div class="payment-method">
+                    <img src="assets/transferbancar.png" alt="Transfer Bancar" class="payment-icon">
+                    <span>Transfer Bancar</span>
+                </div>
+                <div class="payment-method">
+                    <img src="assets/revolut.png" alt="Revolut" class="payment-icon">
+                    <span>Revolut</span>
+                </div>
+                <div class="payment-method">
+                    <img src="assets/paysafecard.png" alt="Paysafecard" class="payment-icon">
+                    <span>Paysafecard (+5€)</span>
+                </div>
+                <div class="payment-method">
+                    <img src="assets/paypal.png" alt="PayPal" class="payment-icon">
+                    <span>PayPal</span>
+                </div>
+                <div class="payment-method">
+                    <img src="assets/giftcard.png" alt="GiftCard" class="payment-icon">
+                    <span>GiftCarduri (+5€)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contactează-mă</h2>
+        <button id="contact-btn" class="btn primary">Deschide Formularul</button>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h2>Formular de Contact</h2>
+            <form id="contact-form">
+                <input type="text" id="nume" placeholder="Numele tău (minim 6 caractere)" required>
+                <input type="email" id="email" placeholder="Email-ul tău" required>
+                <input type="number" id="discord" placeholder="Discord ID (ex. 1069130267043844118)" required>
+                <textarea id="descriere" placeholder="Descrierea cererii tale (minim 10 cuvinte)" required></textarea>
+
+                <!-- Select pentru metoda de plată -->
+                <select class="select-method" id="payment-method" required>
+                    <option value="" disabled selected>Selecționează metoda de plată</option>
+                    <option value="SelfPay">SelfPay</option>
+                    <option value="Transfer Bancar">Transfer Bancar</option>
+                    <option value="Revolut">Revolut</option>
+                    <option value="Paysafecard">Paysafecard (+5€)</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="GiftCard">GiftCarduri (+5€)</option>
+                </select>
+
+                <button type="submit" class="btn submit">Trimite</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Madanu - Servicii Premium Personalizate. Toate drepturile rezervate.</p>
+        <p>Intra pe serverul de Discord : <a href="https://discord.gg/QwnMa7cy">Click To Join</a></p>
+        <!-- Butoane pentru Termeni și Metode de Plată -->
+        <button id="payment-btn-footer" class="btn">Metode de Plată</button>
+        <button id="terms-btn" class="btn">Termeni și Condiții</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

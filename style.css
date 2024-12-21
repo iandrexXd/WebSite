@@ -1,0 +1,508 @@
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
+
+/* BACKGROUND ANIMATION */
+#background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle, .square, .triangle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: float 15s infinite ease-in-out;
+    border-radius: 50%;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    left: 15%;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 70%;
+    border-radius: 0;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    top: 80%;
+    left: 30%;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 120px solid rgba(0, 132, 255, 0.1);
+    animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #1e1e2f;
+    background: linear-gradient(135deg, #ffcc00, #ffa31a);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ffd633, #ffb84d);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* NAVBAR */
+nav {
+    background: rgba(30, 30, 47, 0.8);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+}
+
+/* SECTION: ABOUT */
+#about {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffcc00;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.1rem;
+}
+
+/* PRICING */
+#pricing {
+    background: #2a2a40;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.pricing-card {
+    margin: 1rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.pricing-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+}
+
+.pricing-card p {
+    font-size: 1.2rem;
+}
+
+/* CONTACT */
+#contact {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #1e1e2f;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a40;
+    color: #fff;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #fff;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #3798ff;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #3798ff;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #82dcff;
+    background: rgba(55, 152, 255, 0.2);
+    border-color: #82dcff;
+    font-size: 18px;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(55, 152, 255, 0.4);
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background: #ffcc00;
+    border-radius: 10px;
+}
+
+/* Buton pentru Termeni și Condiții */
+#terms-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #1e1e2f;
+    background: linear-gradient(135deg, #ffcc00, #ffa31a);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 1rem 0;
+}
+
+#terms-btn:hover {
+    background: linear-gradient(135deg, #ffd633, #ffb84d);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Modalul pentru metodele de plată */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #1e1e2f;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    background-color: #2a2a40;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 120px;
+    height: 140px;
+}
+
+.payment-method:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.payment-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.payment-method span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.payment-method.selected {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.payment-method.selected .payment-icon {
+    transform: scale(1.2);
+}
+
+.payment-method:hover .payment-icon {
+    transform: scale(1.1);
+}
+/* Stilizare avansată pentru elementele select */
+select {
+    background-color: #2a2a40;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #ffcc00;
+    border-radius: 50px;
+    appearance: none; /* Elimină săgeata implicită a browserului */
+    outline: none;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecte hover pentru select */
+select:hover {
+    border-color: #ffd633;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Efecte de focus (când utilizatorul face click pe select) */
+select:focus {
+    border-color: #ffb84d;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Săgeata personalizată pentru select */
+select::-ms-expand {
+    display: none; /* Elimină săgeata de la Internet Explorer */
+}
+
+select::after {
+    content: '\25BC'; /* Săgeata pentru meniul derulant */
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg); /* Săgeată inversă pentru a indica că se deschide */
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecte la hover pentru săgeată */
+select:hover::after {
+    transform: translateY(-50%) rotate(0deg); /* Schimbă direcția săgeții la hover */
+}
+
+/* Stil pentru opțiunile selectate */
+option {
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efect hover pentru opțiuni */
+option:hover {
+    background-color: #ffcc00;
+    color: #1e1e2f;
+}
